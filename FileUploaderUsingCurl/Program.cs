@@ -13,7 +13,6 @@ namespace FileUploaderUsingCurl
     {
         static void Main(string[] args)
         {
-
             string path = args[0];
             WebClient wc = new WebClient();
             /*/
@@ -27,16 +26,10 @@ namespace FileUploaderUsingCurl
             else
             /*/
             {
-
-
-
                 string username = ""; //Do Not Use ROOT
                 string password = ""; //You should server side this string.
                 string port = "";
                 string ip = ""; //Server IP of where the file shall be uploadedd to.
-
-
-
 
                 long length = new FileInfo(path).Length;
                 double megabytes1 = ConvertBytesToMegabytes(length);
@@ -59,7 +52,6 @@ namespace FileUploaderUsingCurl
                     {
                         Console.WriteLine();
                         Console.WriteLine("Attempting To Upload...");
-
                         Process process = new Process();
                         ProcessStartInfo startInfo = new ProcessStartInfo();
                         startInfo.WindowStyle = ProcessWindowStyle.Hidden;
@@ -84,7 +76,6 @@ namespace FileUploaderUsingCurl
                 }
                 Console.ReadLine();
             }
-
         }
         static double ConvertBytesToMegabytes(long bytes)
         {
